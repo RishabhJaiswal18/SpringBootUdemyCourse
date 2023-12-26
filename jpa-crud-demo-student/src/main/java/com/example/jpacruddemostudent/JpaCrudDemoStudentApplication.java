@@ -27,8 +27,30 @@ public class JpaCrudDemoStudentApplication {
 //			createMultipleStudent(studentDAO);
 //			readStudent(studentDAO);
 
-			queryForStudents(studentDAO);
+//			queryForStudents(studentDAO);
+
+//			studentListByLastName(studentDAO);
+
+			updateStudent(studentDAO);
 		};
+	}
+
+	private void updateStudent(StudentDAO studentDAO) {
+		Student theStudent = studentDAO.findById(5);
+		theStudent.setFirstName("Nice");
+
+		studentDAO.update(theStudent);
+
+		System.out.println("Updated Student = " + theStudent);
+	}
+
+	private void studentListByLastName(StudentDAO studentDAO) {
+		List<Student> theStudents = studentDAO.findByLastName("Duck");
+
+		for (Student tempStudent : theStudents) {
+			System.out.println(tempStudent);
+		}
+
 	}
 
 	private void queryForStudents(StudentDAO studentDAO) {
