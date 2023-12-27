@@ -31,8 +31,21 @@ public class JpaCrudDemoStudentApplication {
 
 //			studentListByLastName(studentDAO);
 
-			updateStudent(studentDAO);
+//			updateStudent(studentDAO);
+
+//			deleteStudent(studentDAO);
+
+			deleteAllStudent(studentDAO);
 		};
+	}
+
+	private void deleteAllStudent(StudentDAO studentDAO) {
+		int numberOfRecordsDeleted = studentDAO.deleteAllStudent();
+		System.out.println("Number of record deleted = " + numberOfRecordsDeleted);
+	}
+
+	private void deleteStudent(StudentDAO studentDAO) {
+		studentDAO.delete(5);
 	}
 
 	private void updateStudent(StudentDAO studentDAO) {
