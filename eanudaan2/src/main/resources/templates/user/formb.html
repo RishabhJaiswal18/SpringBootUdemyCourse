@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      lang="en">
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="en"
+	layout:decorate="~{layout_admin/user_layout}">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Quixlab - Bootstrap Admin Dashboard Template by Themefisher.com</title>
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-    <!-- Custom Stylesheet -->
-    <link href="/admin/css/style.css" rel="stylesheet">
+   
 
 </head>
 
@@ -250,65 +243,8 @@
                             <!-- <li><a href="./index-2.html">Home 2</a></li> -->
                         </ul>
                     </li>
-                    <li class="mega-menu mega-menu-sm">
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Know Your Application Status</span>
-                        </a>
-                    
-                    </li>
-                    <li class="nav-label">Application Submitted By NGO</li>
-                    <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Add Scheme</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="./email-inbox.html">Inbox</a></li>
-                            <li><a href="./email-read.html">Read</a></li>
-                            <li><a href="./email-compose.html">Compose</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-label">Enter Bank Details</li>
-                    <li class="nav-label">View Bank Details</li>
-                    <li class="nav-label">Important: Download The</li>
-                    <li class="nav-label">User Manual For Filling</li>
-                     <li class="nav-label">Application Form Using Project Id</li>
-                      <li class="nav-label">Upload DDRS Documents are mandatory</li>
-                       <li class="nav-label">Upload Deficient Documents</li>
-                       
-                    <li class="nav-label">Application Form For DDRC (NEW)</li>
-                    <li class="nav-label">Upload DDRC Documents (NEW)</li>
-                    <li class="nav-label">Application Form For DDRC 1st Installment (ONGOING)</li>  
-                     <li class="nav-label">Upload DDRC Documents 1st Installment (ONGOING)</li>
-                     <li class="nav-label"> Application Form For DDRC 2nd & Final Installment</li>
-                 <li class="nav-label"> Upload DDRC Documents 2nd Full And Final Installment (ONGOING)</li>  
-                 <li class="nav-label"> Scheme of Assistance to Persons with Disabilities for Purchase/ Fitting of Aids and Appliances (ADIP Scheme)</li>
-                    <li class="nav-label"> National Action Plan for Drug Demand Reduction (NAPDDR) </li>
-                     <li class="nav-label"> Support for Marginalised Individuals for Livelihood and Enterprise (SMILE)</li>
-                      <li class="nav-label"> National Action Plan for Senior Citizens (NAPSrC)</li>
-                       <li class="nav-label"> Grant in Aid to Voluntary Organisations working for Scheduled Castes </li>
-                     
-                    <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-graph menu-icon"></i> <span class="nav-text">Completion of PART-A, PART-B,PART-C & Upload DDRSDocuments are mandatory</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="/user/forma">PART - A</a></li>
-                            <li><a href="/user/formb">PART - B</a></li>
-                            <li><a href="/user/formc">PART - C</a></li>
-                          
-                        </ul>
-                    </li>
-                
                    
-                    <li>
-                        <a href="widgets.html" aria-expanded="false">
-                            <i class="icon-badge menu-icon"></i><span class="nav-text">Note: Click on programme name to apply.</span>
-                        </a>
-                    </li>
-                   
-                  
-                   
-                
+                    <li class="nav-label">Apps</li>
                 </ul>
             </div>
         </div>
@@ -331,7 +267,269 @@
             </div>
             <!-- row -->
 
-                          <main id="content" layout:fragment="content">MAIN</main>
+                         <div layout:fragment="content">
+							 <div class="container-fluid">
+							 <div class="card"><div class="card-body">
+	<!--	 <form th:action="@{/user/saveformb}" th:object="${ngodetailsformb}" method="POST">-->
+	 				<div class="row form-group">
+	 				<div class="col-3 col-form-label">
+						 NGO/CBO/Startup/other Oregizations
+						 Name as recorded in (NITI Aayog Portal):
+					 </div>
+	 				<div class="col-3"> USER</div>
+	 				 <div class="col-3">
+							NGO/CBO/Startup/other Oregizations
+						 Name as recorded in (NITI Aayog Portal): 
+						 </div>
+						 <div class="col-3 col-form-label">
+							DL/2005/0000001
+							 </div>
+	 				</div>
+	 				<hr>
+	 			
+	 				<div class="row form-group">
+						
+					 </div>
+					 <div class="row form-group">
+						 <div class="col-3 col-form-label">
+							 <lable class=" col-form-label" style="margin-left: 20px;"> Address:</lable>
+						 </div>
+						 <div class="col-3">
+							 <input type="hidden" th:name="@{ngodetailsId}" th:value="${formBdto.ngodetailsId}">
+							<input type="text" class="form-control" th:name="@{completeAddress}" th:value="${formBdto.completeAddress}"   >
+						 </div>
+						 <div class="col-3 ">
+							<label class=" col-form-label" style="margin-left: 20px;"> City / Town /Village:</label>
+						 </div>
+						 <div class="col-3">
+							 <input type="text"  class="form-control input-default"   >
+						 </div>
+					 </div>
+					 
+					 <div class="row form-group">
+						 
+					 </div>
+					 
+					 <div class="row form-group">
+						 <div class="col-3">
+							 <label class=" col-form-label" style="margin-left: 20px;">District:</label>
+						 </div>
+						 <div class="col-3">
+							  <select id="formAState" class="custom-select form-control"
+													th:name="@{district}" required>
+													<option selected>Select</option>
+													<option value="" th:each="listDistricts : ${listDistrict}"
+														th:value="${listDistricts.DistrictName}"
+														th:text="${listDistricts.DistrictName}"></option>
+
+												</select>
+						 </div>
+						  <div class="col-3">
+							 <label  class=" col-form-label" style="margin-left: 20px;" >State:</label>
+						 </div>
+						 <div class="col-3">
+							<select id="formAState" class="custom-select form-control"
+													th:name="@{state}" required>
+													<option selected>Select</option>
+													<option value="" th:each="listStates : ${listState}"
+														th:value="${listStates.StateCodeLgd}"
+														th:text="${listStates.StateName}"></option>
+
+												</select>
+						 </div>
+					 </div>
+					 <div class="row form-group">
+						
+					 </div>
+					 
+					 <div class="row form-group">
+						 <div class="col-3">
+							 <label  class=" col-form-label" style="margin-left: 20px;">Mobile No.:</label>
+						 </div>
+						 <div class="col-3">
+							 <td>    <!--<a th:value="${formBdto.mobile}">Author name:</a>-->
+							<input type="text" class="form-control" name="completeaddress" th:name="@{mobile}" th:value="${formBdto.mobile}"   >
+								</td>
+						 </div>
+						  <div class="col-3">
+							 <label  class=" col-form-label" style="margin-left: 20px;">Telephone:</label>
+						 </div>
+						 <div class="col-3">
+							  <input type="text" class="form-control" th:name="@{phone1}" th:value="${formBdto.phone1}"   >
+						 </div>
+					 </div>
+					 
+					 <div class="row form-group">
+						
+					 </div>
+					 <div class="row form-group">
+						 <div class="col-3">
+							<label  class=" col-form-label" style="margin-left: 20px;"> Email Address:</label>
+						 </div>
+						 <div class="col-3">
+		           <input type="text" class="form-control" name="completeaddress" th:name="@{email}" th:value="${formBdto.email}"   >	
+						 </div>
+						  <div class="col-3">
+							 <lable class=" col-form-label" style="margin-left: 20px;">  Fax:</label>
+						 </div>
+						 <div class="col-3">
+							 <input type="text" class="form-control" name="completeaddress" th:name="@{faxNumber}" th:value="${formBdto.faxNumber}"   >
+						 </div>
+					 </div>
+					 
+					
+					 
+				<div class="row form-group">
+					<div class="col-3">
+						<label class=" col-form-label" style="margin-left: 20px;"> Underwhich theorganization isregistered:</label>
+					</div>
+					<div class="col-3">
+						<input type="text" class="form-control input-default">
+					</div>
+					 <div class="col-3">
+							<label class="col-form-label" style="margin-left: 20px;" > Project Id:</label>
+						 </div>
+						 <div class="col-3">
+							<input type="text" class="form-control input-default"> 
+						 </div>
+				</div>	 
+					 <div class="row form-group">
+						
+					 </div>
+					 
+					 <h5>Component - Disabilities</h5>
+					 <hr>
+					 <div class="row form-group">
+						 <div class="col-3">
+							<label class="col-form-label" style="margin-left: 20px;"> Acknowledgment No.*</label>
+						 </div>
+						 <div class="col-3">
+							<input type="text" class="form-control input-default">  
+						 </div>
+						 
+					 </div>
+					 <div class="row form-group">
+						 <div class="col-2">
+							 <label class="col-form-label" style="margin-left: 20px;"> State:</label>
+						 </div>
+						 <div class="col-2">
+						 <label class="col-form-label">	DELHI </label>
+						 </div>
+						  <div class="col-2">
+							 <label class="col-form-label"> District:</label>
+						 </div>
+						 <div class="col-2">
+							<label class="col-form-label"> CENTRAL </label>
+						 </div>
+					 </div>
+					 <div class="row form-group">
+						 <div class="col-2" style="margin-left: 20px;">
+							<input type="radio" name="kk">Yes
+							<input type="radio" name="kk">No
+							 Is adjoining InternationalBorders?*
+						 </div>
+						 <div class="col-2">
+							 <input type="radio" name="kk">Yes
+							<input type="radio" name="kk">No
+							 Is Left Wing ExtremismAffected Areas?*
+						 </div>
+						  <div class="col-2">
+							  <input type="radio" name="kk">Yes
+							<input type="radio" name="kk">No
+							 Is underHimalayanRegion?*
+						 </div>
+						  <div class="col-2">
+							  <input type="radio" name="kk">Yes
+							<input type="radio" name="kk">No
+							 Is Left Wing ExtremismAffected Areas?*
+						 </div>
+
+						  <div class="col-2">
+							  Is AspirationalDistrict?
+						 </div>
+
+					 </div>
+					 <div class="row form-group">
+					<h5 style="margin-left: 20px;">Locations and Address of the Project:</h5>
+					<hr>
+					</div> 
+					 <div class="row form-group">
+						
+						 <div class="col-2" style="margin-left: 20px;">Address :*</div>
+						 <div class="col-2">Alternate Address :</div>
+						 <div class="col-2">Location Type:</div>
+						 <div class="col-2">Landmark:</div>
+						
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							 <input type="text" style="margin-left: 20px;" class="form-control input-default">
+						 </div>
+						 <div class="col-2">
+							 <input type="text" class="form-control input-default">
+						 </div>
+
+						 <div class="col-2">
+							 <input type="text" class="form-control input-default">
+						 </div>
+
+						 <div class="col-2">
+							 <input type="text" class="form-control input-default">
+						 </div>
+						 
+					 </div>
+					 <div class="row form-group">
+						 <div class="col-3" style="margin-left: 20px;">
+							 City / Town / Village:*
+						 </div>
+					 <div class="col-3">
+							PIN Code:*
+						 </div>
+						 <div class="col-3">
+							 Telephone(with STDCode):(e.g.0116512345678)
+						 </div>
+						 <div class="col-3">
+							 
+						 </div>
+	 
+					 </div>
+					 <div class="row form-group">
+						 <div class="col-3" style="margin-left: 20px;">
+							 <input type="text" class="form-control input-default">
+						 </div>
+						 <div class="col-3">
+							  <input type="text" class="form-control input-default">
+						 </div>
+						  <div class="col-3">
+							  <input type="text" class="form-control input-default">
+						 </div>
+						
+					 </div>
+					 <div class="row form-group">
+						 <div class="col-3" style="margin-left: 20px;">
+						 <label>3(i).Whether the project is being run from more than one location * </label>
+					 </div>
+					 <div class="col-3">
+						 <label radio-inline mr-3><input type="radio" class="">Yes</label>
+						 <input type="radio" class=""><label>No</label>
+					 </div>
+					 </div>
+					 <div class="row form-group">
+						 <div class="col-3" style="margin-left: 20px;">
+							 <label>3(ii).If yes,details of all other locations *</label>
+						 </div>
+						 <div class="col-3">
+							 <input type="text" class="form-control input-default">
+						 </div>
+					 </div>
+					 <div class="row form-group">
+					 <div class="col-6" style="text-align: center;"><input type="submit" class="btn btn-dark"></div>
+					 </div>
+					 	</div>
+					 	</div>
+	 </div>
+	 </div>
+	 </div>
             <!-- #/ container -->
         </div>
         <!--**********************************
@@ -344,7 +542,7 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
+                <p></p>
             </div>
         </div>
         <!--**********************************
@@ -358,12 +556,14 @@
     <!--**********************************
         Scripts
     ***********************************-->
-    <script src="/admin/plugins/common/common.min.js"></script>
-    <script src="/admin/js/custom.min.js"></script>
-    <script src="/admin/js/settings.js"></script>
-    <script src="/admin/js/gleek.js"></script>
-    <script src="/admin/js/styleSwitcher.js"></script>
+    <script src="plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/gleek.js"></script>
+    <script src="js/styleSwitcher.js"></script>
 
 </body>
 
 </html>
+
+

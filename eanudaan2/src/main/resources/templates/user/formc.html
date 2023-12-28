@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="en"
+	layout:decorate="~{layout_admin/user_layout}">
+
+<head>
+   
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="index.html">
+                    <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
+                    <span class="logo-compact"><img src="./images/logo-compact.png" alt=""></span>
+                    <span class="brand-title">
+                        <img src="images/logo-text.png" alt="">
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">    
+            <div class="header-content clearfix">
+                
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="toggle-icon"><i class="icon-menu"></i></span>
+                    </div>
+                </div>
+                <div class="header-left">
+                    <div class="input-group icons">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-3" id="basic-addon1"><i class="mdi mdi-magnify"></i></span>
+                        </div>
+                        <input type="search" class="form-control" placeholder="Search Dashboard" aria-label="Search Dashboard">
+                        <div class="drop-down   d-md-none">
+							<form action="#">
+								<input type="text" class="form-control" placeholder="Search">
+							</form>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <ul class="clearfix">
+                        <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
+                                <i class="mdi mdi-email-outline"></i>
+                                <span class="badge gradient-1 badge-pill badge-primary">3</span>
+                            </a>
+                            <div class="drop-down animated fadeIn dropdown-menu">
+                                <div class="dropdown-content-heading d-flex justify-content-between">
+                                    <span class="">3 New Messages</span>  
+                                    
+                                </div>
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li class="notification-unread">
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="images/avatar/1.jpg" alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-heading">Saiful Islam</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="notification-unread">
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="images/avatar/2.jpg" alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-heading">Adam Smith</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                    <div class="notification-text">Can you do me a favour?</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="images/avatar/3.jpg" alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-heading">Barak Obama</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="images/avatar/4.jpg" alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-heading">Hilari Clinton</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                    <div class="notification-text">Hello</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </li>
+                        <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
+                                <i class="mdi mdi-bell-outline"></i>
+                                <span class="badge badge-pill gradient-2 badge-primary">3</span>
+                            </a>
+                            <div class="drop-down animated fadeIn dropdown-menu dropdown-notfication">
+                                <div class="dropdown-content-heading d-flex justify-content-between">
+                                    <span class="">2 New Notifications</span>  
+                                    
+                                </div>
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-present"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Events near you</h6>
+                                                    <span class="notification-text">Within next 5 days</span> 
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-present"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Event Started</h6>
+                                                    <span class="notification-text">One hour ago</span> 
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-present"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Event Ended Successfully</h6>
+                                                    <span class="notification-text">One hour ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-present"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Events to Join</h6>
+                                                    <span class="notification-text">After two days</span> 
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </li>
+                        <li class="icons dropdown d-none d-md-flex">
+                            <a href="javascript:void(0)" class="log-user"  data-toggle="dropdown">
+                                <span>English</span>  <i class="fa fa-angle-down f-s-14" aria-hidden="true"></i>
+                            </a>
+                            <div class="drop-down dropdown-language animated fadeIn  dropdown-menu">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li><a href="javascript:void()">English</a></li>
+                                        <li><a href="javascript:void()">Dutch</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="icons dropdown">
+                            <div class="user-img c-pointer position-relative"   data-toggle="dropdown">
+                                <span class="activity active"></span>
+                                <img src="images/user/1.png" height="40" width="40" alt="">
+                            </div>
+                            <div class="drop-down dropdown-profile   dropdown-menu">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="app-profile.html"><i class="icon-user"></i> <span>Profile</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="email-inbox.html"><i class="icon-envelope-open"></i> <span>Inbox</span> <div class="badge gradient-3 badge-pill badge-primary">3</div></a>
+                                        </li>
+                                        
+                                        <hr class="my-2">
+                                        <li>
+                                            <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock Screen</span></a>
+                                        </li>
+                                        <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="nk-sidebar">           
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label">Dashboard</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./index.html">Home 1</a></li>
+                            <!-- <li><a href="./index-2.html">Home 2</a></li> -->
+                        </ul>
+                    </li>
+                   
+                    <li class="nav-label">Apps</li>
+                </ul>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+
+                         <div layout:fragment="content">
+							 <div class="container-fluid">
+							 <div class="card"><div class="card-body">
+		 <form th:action="@{/user/saveforma}" th:object="${ngodetailsforma}" method="POST">
+	 				<div class="row form-group">
+	 				<div class="col-3 col-form-label">
+						 NGO/CBO/Startup/other Oregizations
+						 Name as recorded in (NITI Aayog Portal):
+					 </div>
+	 				<div class="col-3"> USER</div>
+	 				 <div class="col-3">
+							NGO/CBO/Startup/other Oregizations
+						 Name as recorded in (NITI Aayog Portal): 
+						 </div>
+						 <div class="col-3 col-form-label">
+							DL/2005/0000001
+							 </div>
+	 				</div>
+	 				<hr>
+	 			
+	 				<div class="row form-group">
+						
+					 </div>
+					 <div class="row form-group">
+						 <div class="col-3 col-form-label">
+							 <lable class=" col-form-label" style="margin-left: 20px;"> Address:</lable>
+						 </div>
+						 <div class="col-3">
+							 <input type="hidden" th:name="@{ngodetailsId}" th:value="${formCdto.ngodetailsId}">
+							<input type="text" class="form-control" th:name="@{completeAddress}" th:value="${formCdto.completeAddress}"   >
+						 </div>
+						 <div class="col-3 ">
+							<label class=" col-form-label" style="margin-left: 20px;"> City / Town /Village:</label>
+						 </div>
+						 <div class="col-3">
+							 <input type="text"  class="form-control input-default"  th:name="@{city}" >
+						 </div>
+					 </div>
+					 
+					 <div class="row form-group">
+						 
+					 </div>
+					 
+					 <div class="row form-group">
+						 <div class="col-3">
+							 <label class=" col-form-label" style="margin-left: 20px;">District:</label>
+						 </div>
+						 <div class="col-3">
+							  <select id="formAState" class="custom-select form-control"
+													th:name="@{district}" required>
+													<option selected>Select</option>
+													<option value="" th:each="listDistricts : ${listDistrict}"
+														th:value="${listDistricts.DistrictName}"
+														th:text="${listDistricts.DistrictName}"></option>
+
+												</select>
+						 </div>
+						  <div class="col-3">
+							 <label  class=" col-form-label" style="margin-left: 20px;" >State:</label>
+						 </div>
+						 <div class="col-3">
+							<select id="formAState" class="custom-select form-control"
+													th:name="@{state}" required>
+													<option selected>Select</option>
+													<option value="" th:each="listStates : ${listState}"
+														th:value="${listStates.StateCodeLgd}"
+														th:text="${listStates.StateName}"></option>
+
+												</select>
+						 </div>
+					 </div>
+					 <div class="row form-group">
+						
+					 </div>
+					 
+					 <div class="row form-group">
+						 <div class="col-3">
+							 <label  class=" col-form-label" style="margin-left: 20px;">Mobile No.:</label>
+						 </div>
+						 <div class="col-3">
+							 <td>    <!--<a th:value="${formCdto.mobile}">Author name:</a>-->
+							<input type="text" class="form-control" name="completeaddress" th:name="@{mobile}" th:value="${formCdto.mobile}"   >
+								</td>
+						 </div>
+						  <div class="col-3">
+							 <label  class=" col-form-label" style="margin-left: 20px;">Telephone:</label>
+						 </div>
+						 <div class="col-3">
+							  <input type="text" class="form-control" th:name="@{phone1}" th:value="${formCdto.phone1}"   >
+						 </div>
+					 </div>
+					 
+					 <div class="row form-group">
+						
+					 </div>
+					 <div class="row form-group">
+						 <div class="col-3">
+							<label  class=" col-form-label" style="margin-left: 20px;"> Email Address:</label>
+						 </div>
+						 <div class="col-3">
+		           <input type="text" class="form-control" name="completeaddress" th:name="@{email}" th:value="${formCdto.email}"   >	
+						 </div>
+						  <div class="col-3">
+							 <lable class=" col-form-label" style="margin-left: 20px;">  Fax:</label>
+						 </div>
+						 <div class="col-3">
+							 <input type="text" class="form-control" name="completeaddress" th:name="@{faxNumber}" th:value="${formCdto.faxNumber}"   >
+						 </div>
+					 </div>
+					 
+					
+					 
+				<div class="row form-group">
+					<div class="col-3">
+						<label class=" col-form-label" style="margin-left: 20px;"> Underwhich theorganization isregistered:</label>
+					</div>
+					<div class="col-3">
+						<input type="text" class="form-control input-default">
+					</div>
+					 <div class="col-3">
+							<label class="col-form-label" style="margin-left: 20px;" > Project Id:</label>
+						 </div>
+						 <div class="col-3">
+							<input type="text" class="form-control input-default"> 
+						 </div>
+				</div>	 
+					 <div class="row form-group">
+						 <div class="col-3">
+							<label class="col-form-label" style="margin-left: 20px;" > Acknowledgment No.</label>
+						 </div>
+						 <div class="col-3">
+							<input type="text" class="form-control input-default"> 
+						 </div>
+					 </div>
+					 
+					 <h5>32.A. Organization Fund Flow:</h5>
+					 <hr>
+					 <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">Particulars</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> Year of commencement</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> Previous Year(Actual)</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> Current Year budgeted/actual</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> Year of commence</label>
+						 </div>
+						 
+						 
+						 
+					 </div>
+					 <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">Financial Year</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <select class="form-control form-control-lg"><option>Select Year</option></select> </label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><select class="form-control form-control-lg"><option>Select Year</option></select></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <select class="form-control form-control-lg"><option>Select Year</option></select></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <select class="form-control form-control-lg"><option>Select Year</option></select></label>
+						 </div>
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">Total Income, of which (each major source within the g</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">(a) funded by office bearers</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">(b) donations from private sector</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						 
+						 
+					 </div>
+					 <h5>B. Organization Expenditure Flow:</h5>
+					 
+					 <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">(Expenditure Details</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">Previous Financial Year</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> Previous Year (new Projects)</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> Current Year budgeted/actual</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">Previous Financial Ye</label>
+						 </div>
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">(b) donations from private sector</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><select class="form-control form-control-lg">
+                                                <option>Option 1</option>
+                                                <option>Option 2</option>
+                                                <option>Option 3</option>
+                                            </select></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <select class="form-control form-control-lg">
+                                                <option>Option 1</option>
+                                                <option>Option 2</option>
+                                                <option>Option 3</option>
+                                            </select></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <select class="form-control form-control-lg">
+                                                <option>Option 1</option>
+                                                <option>Option 2</option>
+                                                <option>Option 3</option>
+                                            </select></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><select class="form-control form-control-lg">
+                                                <option>Option 1</option>
+                                                <option>Option 2</option>
+                                                <option>Option 3</option>
+                                            </select></label>
+						 </div>	 
+						 
+					 </div>
+					   <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">(i) Honorarium etc.</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					 
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">Rental (a) Building</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">Rental (b) Furniture & fixture</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">Rental (c) Plant & machinery</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">Rental (d) Others (to specify)</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">Direct expenses on beneficiaries (given in cash/cheque)</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">Direct expenses on beneficiaries (given in cash/cheque)</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">Direct expenses on beneficiaries (given in cash/cheque)</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">(iv) Direct expenses incurred on beneficiaries (in kind)a</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">(iv)Direct expenses incurred on beneficiaries (in kind)b</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">(iv)Direct expenses incurred on beneficiaries (in kind)c.</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">(iv)Direct expenses incurred on beneficiaries (in kind)d</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">(iv)Direct expenses incurred on beneficiaries (in kind)e</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">(v) Expenditure against contingencies (Printing and Sta</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">(vi) Building Maintenance, repairs</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					  <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">(vii) Material costs incurred (For imparting Vocational T</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					 <div class="row form-group">
+						 <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;">(ix) Total Cost and cost per beneficiary</label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"> <input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>
+						 
+						  <div class="col-2">
+							<label class="col-form-label" style="margin-left: 20px;"><input type="text" class="form-control input-default" placeholder="Input Default"></label>
+						 </div>	 
+						 
+					 </div>
+					 
+					 <div class="row form-group">
+						 <div class="col-3" style="margin-left: 20px;">
+							 <label>upload</label>
+						 </div>
+						 <div class="col-3">
+							 <input type="file" class="form-control input-default">
+						 </div>
+					 </div>
+					 <div class="row form-group">
+					 <div class="col-6" style="text-align: center;"><input type="submit" class="btn btn-dark"></div>
+					 </div>
+					 	</div>
+					 	</div>
+	 </div>
+	 </div>
+	 </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p></p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/gleek.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+
+</body>
+
+</html>
+
+
